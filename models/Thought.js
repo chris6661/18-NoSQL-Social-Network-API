@@ -12,7 +12,7 @@ const ReactionSchema = new Schema({
     },
     reactionBody: {
         type: String,
-        required: "Please enter a reaction",
+        required: "Please enter a reaction.",
         maxlength: [280, "Thought must be less than 280 characters!"]
     },
     username: {
@@ -22,7 +22,7 @@ const ReactionSchema = new Schema({
     createdAt: {
         type: Date,
         default: Date.now,
-        get: (createdAtVal) => moment(createdAtVal).format('MMM DD, YYYY [at] hh:mm a')
+        get: (createdAtValidator) => moment(createdAtValidator).format('MMM DD, YYYY [at] hh:mm a')
     }
 }, {
     toJSON: {
@@ -46,7 +46,7 @@ const ThoughtSchema = new Schema({
     username: {
         type: String,
         required: 'Enter your Username',
-
+        minLength: 5
     },
     reactions: [ReactionSchema]
 }, {
@@ -57,10 +57,10 @@ const ThoughtSchema = new Schema({
     id: false
 });
 
-const Thought = model('Thought', ThoughtSchema);
-
 ThoughtSchema.virtual('reactionsCount').get(function () {
     return this.reactions.length;
 });
+
+const Thought = model('Thought', ThoughtSchema);
 
 module.exports = Thought;
