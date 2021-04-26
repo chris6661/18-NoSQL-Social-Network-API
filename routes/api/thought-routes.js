@@ -24,10 +24,10 @@ router
 
 router
   .route('/:thoughtId/reactions')
-  .post(addReaction)
+  .post(addReaction);
 
 router
   .route('/:thoughtId/reactions/:reactionId')
-  .delete(removeReaction)
+  .delete(removeReaction);
 
 module.exports = router;

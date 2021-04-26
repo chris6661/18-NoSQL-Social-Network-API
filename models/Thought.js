@@ -6,7 +6,8 @@ const {
 const moment = require('moment');
 const reactionSchema = require('./Reaction');
 
-const ThoughtSchema = new Schema({
+const ThoughtSchema = new Schema(
+  {
   thoughtText: {
     type: String,
     required: true,

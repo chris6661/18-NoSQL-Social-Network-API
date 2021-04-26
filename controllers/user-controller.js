@@ -48,11 +48,11 @@ const userController = {
     },
 
     //create user
-    createUsers({
+    createUser({
         body
     }, res) {
         User.create(body)
-            .then(dbUserData => res.json(dbUsersData))
+            .then(dbUserData => res.json(dbUserData))
             .catch(err => res.status(400).json(err));
     },
 
@@ -80,7 +80,7 @@ const userController = {
     },
 
     //delete user
-    deleteUsers({
+    deleteUser({
         params
     }, res) {
         User.findOneAndDelete({
@@ -108,7 +108,7 @@ const userController = {
                     .then(() => {
                         //deletes user's thought associated with id
                         Thought.deleteMany({
-                                username: dbUsersData.username
+                                username: dbUserData.username
                             })
                             .then(() => {
                                 res.json({
