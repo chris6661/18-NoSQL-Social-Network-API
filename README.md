@@ -1,15 +1,25 @@
-<!--
- Copyright 2021 Admin
+# NoSQL Social Network API
 
- Licensed under the Apache License, Version 2.0 (the "License");
- you may not use this file except in compliance with the License.
- You may obtain a copy of the License at
+## Description 
+This application is for creating an API for a social media network that can handle large amounts of unstructured data utilizing a NoSQL database. The user has the ability to add, delete, get, and update users, friends of users, thoughts, and reactions on those thoughts.
 
-     http://www.apache.org/licenses/LICENSE-2.0
+## Installation
+Clone the application from the command line and run 'npm i' to install the necessary dependencies, then run the command "npm start" from the command line. 
 
- Unless required by applicable law or agreed to in writing, software
- distributed under the License is distributed on an "AS IS" BASIS,
- WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
- See the License for the specific language governing permissions and
- limitations under the License.
--->
+## Usage
+To run this application, run: npm start to use on a local server 3001 after cloning the repository and installing the necessary dependencies.
+
+### Built With 
+
+ * JavaScript
+ * Node JS
+ * NoSQL - MongoDB
+ * Mongoose
+ * Moment
+ * Express
+
+## Demonstrations
+
+Video demonstrations can be found on my YouTube channel by clikcing the link below. 
+
+https://www.youtube.com/channel/UCKd06ImKuW8PDVQPKkFhkuA
